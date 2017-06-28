@@ -32,8 +32,105 @@
 
 修改用户信息
 -url: /modifyinfo
--data: {"id": xxx, "xxx": xxx ......}
--return: {"status":(0-修改失败，1-修改成功)， }
+-way: post
+-data: {"id": xxx, "xxx"（不能为authority）: xxx ......}
+-return: {"status":(0-修改失败，1-修改成功)， 
+	  "id": xxx, 
+	  "authority":(0-普通用户，1-司机，2-管理员， 3-超级管理员), 
+	  "sex": (0-女， 1-男), 
+	  "driverType": xxx， 
+	  "identify": xxx,
+	  "phone": xxx,
+	  "photoURL": xxx,
+	  "address": xxx,
+	  "companyID": xxx,
+	  "appartmentID": xxx,
+	  "jobNo": xxx}
+
+
+修改用户权限
+-url: /modifyauthority
+-way: post
+-data: {"id": xxx, "authority": (0-普通用户，1-司机，2-管理员， 3-超级管理员)}
+-return: {"status":(0-修改失败，1-修改成功)}
+
+
+注册车辆
+-url: /registercar
+-way: post
+-data: {"carNo": xxx, "carType": xxx, "time": xxx,       }
+-return: {"status":, (carinfo)}
+
+
+删除车辆
+-url: /removecar
+-way: post
+-data: {"id": xxx}
+-return: {"status": }
+
+
+修改车辆
+-url: /modifycar
+-way: post
+-data: {"id": xxx, "xxx": xxx .......}
+-return: {"status":, (carinfo)}
+
+
+获取车辆
+-url: /getcar
+-way: get
+-data: {"id": xxx}
+-return: {"status":, (carinfo)}
+
+
+获取全部车辆
+-url: /getallcar
+-way: get
+-data:
+-return: {"status":, "cars": [(carinfos)]}
+
+
+上传位置状态和报警信息
+-url: /sendcarinfo
+-way: post
+-data: {(location), "status": (0-不是发送状态, 1-发送状态), "statusdetail": {}, "warning": (0-不是发送报警, 1-发送报警), "warningdetail": {}}
+-return: {"status":(0-发送失败，1-发送成功)}
+
+
+单位
+
+部门
+
+报警字典
+（不能删除）
+
+
+获取消息
+-url: /getmessage
+-way: get
+-data:
+-return: {"status":, "infos": [{"type": (0-广播，1-其他), "sender": {(userinfo)}, "title": xxx, "content": xxx}, {}.......]}
+
+
+发送消息
+-url: /sendmessage
+-way: post
+-data: {"type": (0-广播，1-其他), "title": xxx, "content": xxx, "receiverid": xxx}
+-return: {"status":(0-发送失败，1-发送成功)}
+
+
+获取全部运单
+-url: /getorders
+-way: get
+-data: {"carid": xxx, "driverid": xxx}
+-return: {"status":, orders:[(orderinfo)]}
+
+
+获取运单
+-url: /getorder
+-way: get
+-data:
+
 
 
 
