@@ -55,6 +55,21 @@
 -return: {"status":(0-修改失败，1-修改成功)}
 
 
+获取特定用户信息
+-url: /getusers?authority=(0-普通用户，1-司机，2-管理员， 3-超级管理员, 4-所有用户)
+-way: get
+-data:
+-return: {"status":, "users": [{userdetails}]}
+
+
+获取单个用户
+-url: /getuser?id=xxx
+-way: get
+-data:
+-return: {"status":, "userdetail": {details}, "orders": [{orderdetails}]}
+
+
+
 注册车辆
 -url: /registercar
 -way: post
@@ -77,10 +92,10 @@
 
 
 获取车辆
--url: /getcar
+-url: /getcar?id=xxx
 -way: get
--data: {"id": xxx}
--return: {"status":, (carinfo)}
+-data:
+-return: {"status":, (carinfo), "orders": [{orderdetails}]}
 
 
 获取全部车辆
@@ -120,16 +135,42 @@
 
 
 获取全部运单
--url: /getorders
+-url: /getorders?carid=xxx&driverid=xxx
 -way: get
--data: {"carid": xxx, "driverid": xxx}
+-data:
 -return: {"status":, orders:[(orderinfo)]}
 
 
 获取运单
--url: /getorder
+-url: /getorder?id=xxx
 -way: get
 -data:
+-return: {"status":, "orderdetail":{}, "route":[{(locationdetail)}], "carstatus": [{carstatusdetails}], "warning":[{warningdetails}]}
+
+
+注册运单
+-url: /registerorder
+-way: post
+-data: {(运单信息)}
+-return: {"status": (0-注册失败， 1-注册成功)}
+
+
+删除运单
+-url: /removeorder?id=xxx
+-way: get
+-data:
+-return: {"status": }
+
+
+修改运单
+-url: /modifyorder
+-way: post
+-data: {"id": xxx, "xxx": xxx, ......}
+-return: {"status":, (order)}
+
+
+
+
 
 
 
