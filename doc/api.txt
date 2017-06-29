@@ -179,7 +179,7 @@
 		 }
 
 
-获取车辆
+获取单个车辆
 -url: /getcar?id=xxx
 -way: get
 -data:
@@ -260,7 +260,7 @@
 		 }
 
 
-获取单位
+获取单个单位
 -url: /getunit?id=xxx
 -way: get
 -data:
@@ -295,7 +295,7 @@
 		 }
 
 
-获取部门
+获取单个部门
 -url: /getdepartment?id=xxx
 -way: get
 -data:
@@ -333,7 +333,7 @@
 		 }
 
 
-获取报警字典
+获取单个报警字典
 -url: /getwarning?id=xxx
 -way: get
 -data:
@@ -346,7 +346,7 @@
 		  
 
 
-获取消息
+获取个人相关的全部消息
 -url: /getmessage
 -way: get
 -data:
@@ -423,7 +423,7 @@
 		 }
 
 
-获取运单
+获取单个运单
 -url: /getorder?id=xxx
 -way: get
 -data:
