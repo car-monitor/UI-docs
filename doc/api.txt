@@ -183,7 +183,17 @@
 -url: /getcar?id=xxx
 -way: get
 -data:
--return: {"status":, (carinfo), 
+-return: {"status": (0-获取失败, 1-获取成功), 
+		  "car": 
+		    {"id": xxx,
+		     "carPlate": xxx, 
+		     "carType": xxx, 
+		     "buyTime": xxx, 
+		     "cargoCapacity": xxx,
+		     "engineNo": xxx, 
+		     "owner": (车主身份证), 
+		     "passengerNum": xxx,
+		     "photoURL": xxx}, 
 		  "orders": [
 	      	{"id": xxx,
 	      	 "carID": xxx
@@ -215,7 +225,7 @@
 -way: get
 -data:
 -return: {"status": (0-获取失败, 1-获取成功), 
-		  "car": 
+		  "cars": [
 		    {"id": xxx,
 		     "carPlate": xxx, 
 		     "carType": xxx, 
@@ -224,7 +234,8 @@
 		     "engineNo": xxx, 
 		     "owner": (车主身份证), 
 		     "passengerNum": xxx,
-		     "photoURL": xxx}
+		     "photoURL": xxx}, 
+		     {}, ......]
 		 }
 
 
