@@ -8,15 +8,15 @@
 用户登录（cookie包含sessionid以及用户id）
 -url: /login
 -way: post
--data: {"username":xxx, 
+-data: {"username":xxx,
 		"password":xxx}
 -return: {"status":(0-用户名密码错误，1-登录成功)，
 		  "user": {
-		  	"id": xxx, 
+		  	"id": xxx,
 		  	"username": xxx,
-	  		"authority":(0-普通用户，1-司机，2-管理员， 3-超级管理员), 
-	  		"sex" : (0-女， 1-男), 
-	  		"driverType": xxx， 
+	  		"authority":(0-普通用户，1-司机，2-管理员， 3-超级管理员),
+	  		"sex" : (0-女， 1-男),
+	  		"driverType": xxx，
 	  		"identify": xxx,
 	  		"phone": xxx,
 	  		"photoURL": xxx,
@@ -37,16 +37,16 @@
 修改用户信息
 -url: /modifyinfo
 -way: post
--data: {"id": xxx, 
-		"xxx"（不能为authority）: xxx 
+-data: {"id": xxx,
+		"xxx"（不能为authority）: xxx
 		......}
--return: {"status":(0-修改失败，1-修改成功)， 
+-return: {"status":(0-修改失败，1-修改成功)，
 	  	  "user": {
-		  	"id": xxx, 
+		  	"id": xxx,
 		  	"username": xxx,
-	  		"authority":(0-普通用户，1-司机，2-管理员， 3-超级管理员), 
-	  		"sex": (0-女， 1-男), 
-	  		"driverType": xxx， 
+	  		"authority":(0-普通用户，1-司机，2-管理员， 3-超级管理员),
+	  		"sex": (0-女， 1-男),
+	  		"driverType": xxx，
 	  		"identify": xxx,
 	  		"phone": xxx,
 	  		"photoURL": xxx,
@@ -60,7 +60,7 @@
 修改用户权限
 -url: /modifyauthority
 -way: post
--data: {"id": xxx, 
+-data: {"id": xxx,
 		"authority": (0-普通用户，1-司机，2-管理员， 3-超级管理员)}
 -return: {"status":(0-修改失败，1-修改成功)}
 
@@ -71,11 +71,11 @@
 -data:
 -return: {"status": (0-获取失败, 1-获取成功),
           "users": [
-		 	{"id": xxx, 
+		 	{"id": xxx,
 		 	 "username": xxx,
-	         "authority":(0-普通用户，1-司机，2-管理员， 3-超级管理员), 
-	         "sex": (0-女， 1-男), 
-	         "driverType": xxx， 
+	         "authority":(0-普通用户，1-司机，2-管理员， 3-超级管理员),
+	         "sex": (0-女， 1-男),
+	         "driverType": xxx，
 	         "identify": xxx,
 	         "phone": xxx,
 	         "photoURL": xxx,
@@ -91,13 +91,13 @@
 -url: /getuser?id=xxx
 -way: get
 -data:
--return: {"status": (0-获取失败, 1-获取成功), 
-	  	  "user": 
-			{"id": xxx, 
+-return: {"status": (0-获取失败, 1-获取成功),
+	  	  "user":
+			{"id": xxx,
 			 "username": xxx,
-	         "authority":(0-普通用户，1-司机，2-管理员， 3-超级管理员), 
-	         "sex": (0-女， 1-男), 
-	         "driverType": xxx， 
+	         "authority":(0-普通用户，1-司机，2-管理员， 3-超级管理员),
+	         "sex": (0-女， 1-男),
+	         "driverType": xxx，
 	         "identify": xxx,
 	         "phone": xxx,
 	         "photoURL": xxx,
@@ -126,7 +126,7 @@
 	      	 "addresseePhone": xxx
 	      	 "addresseeAddress": xxx
 	      	 "sealExpect": xxx
-	      	 "sealCurrent": xx}, 
+	      	 "sealCurrent": xx},
 	      	{}, ......]
 	    }
 
@@ -135,22 +135,22 @@
 注册车辆
 -url: /registercar
 -way: post
--data: {"carPlate": xxx, 
-		"carType": xxx, 
-		"buyTime": xxx, 
-		"cargoCapacity": xxx, 
-		"engineNo": xxx, 
-		"owner": (车主身份证), 
+-data: {"carPlate": xxx,
+		"carType": xxx,
+		"buyTime": xxx,
+		"cargoCapacity": xxx,
+		"engineNo": xxx,
+		"owner": (车主身份证),
 		"passengerNum": xxx}
--return: {"status": (0-注册失败, 1-注册成功), 
-		  "car": 
+-return: {"status": (0-注册失败, 1-注册成功),
+		  "car":
 		    {"id": xxx,
-		     "carPlate": xxx, 
-		     "carType": xxx, 
-		     "buyTime": xxx, 
+		     "carPlate": xxx,
+		     "carType": xxx,
+		     "buyTime": xxx,
 		     "cargoCapacity": xxx,
-		     "engineNo": xxx, 
-		     "owner": (车主身份证), 
+		     "engineNo": xxx,
+		     "owner": (车主身份证),
 		     "passengerNum": xxx,
 		     "photoURL": xxx}
 		 }
@@ -166,18 +166,18 @@
 修改车辆
 -url: /modifycar
 -way: post
--data: {"id": xxx, 
-		"xxx": xxx, 
+-data: {"id": xxx,
+		"xxx": xxx,
 		......}
 -return: {"status": (0-修改失败, 1-修改成功),
-          "car": 
+          "car":
 		    {"id": xxx,
-		     "carPlate": xxx, 
-		     "carType": xxx, 
-		     "buyTime": xxx, 
+		     "carPlate": xxx,
+		     "carType": xxx,
+		     "buyTime": xxx,
 		     "cargoCapacity": xxx,
-		     "engineNo": xxx, 
-		     "owner": (车主身份证), 
+		     "engineNo": xxx,
+		     "owner": (车主身份证),
 		     "passengerNum": xxx,
 		     "photoURL": xxx}
 		 }
@@ -187,17 +187,17 @@
 -url: /getcar?id=xxx
 -way: get
 -data:
--return: {"status": (0-获取失败, 1-获取成功), 
-		  "car": 
+-return: {"status": (0-获取失败, 1-获取成功),
+		  "car":
 		    {"id": xxx,
-		     "carPlate": xxx, 
-		     "carType": xxx, 
-		     "buyTime": xxx, 
+		     "carPlate": xxx,
+		     "carType": xxx,
+		     "buyTime": xxx,
 		     "cargoCapacity": xxx,
-		     "engineNo": xxx, 
-		     "owner": (车主身份证), 
+		     "engineNo": xxx,
+		     "owner": (车主身份证),
 		     "passengerNum": xxx,
-		     "photoURL": xxx}, 
+		     "photoURL": xxx},
 		  "orders": [
 	      	{"id": xxx,
 	      	 "carID": xxx
@@ -219,7 +219,7 @@
 	      	 "addresseePhone": xxx
 	      	 "addresseeAddress": xxx
 	      	 "sealExpect": xxx
-	      	 "sealCurrent": xx}, 
+	      	 "sealCurrent": xx},
 	      	{}, ......]
 	     }
 
@@ -228,17 +228,17 @@
 -url: /getcars?keyword=xxx
 -way: get
 -data:
--return: {"status": (0-获取失败, 1-获取成功), 
+-return: {"status": (0-获取失败, 1-获取成功),
 		  "cars": [
 		    {"id": xxx,
-		     "carPlate": xxx, 
-		     "carType": xxx, 
-		     "buyTime": xxx, 
+		     "carPlate": xxx,
+		     "carType": xxx,
+		     "buyTime": xxx,
 		     "cargoCapacity": xxx,
-		     "engineNo": xxx, 
-		     "owner": (车主身份证), 
+		     "engineNo": xxx,
+		     "owner": (车主身份证),
 		     "passengerNum": xxx,
-		     "photoURL": xxx}, 
+		     "photoURL": xxx},
 		     {}, ......]
 		 }
 
@@ -246,7 +246,7 @@
 上传位置状态和报警信息
 -url: /sendcarinfo
 -way: post
--data: {"location": 
+-data: {"location":
 		   {"carID": xxx,
 		    "waybillID": xxx,
 		    "time": xxx,
@@ -254,10 +254,10 @@
 		    "locationType": xxx,
 		    "longitude": xxx,
 		    "latitude": xxx,
-		    "driverId": xxx}, 
-		"status": (0-不是发送状态, 1-发送状态), 
-		"statusdetail": {}, 
-		"warning": (0-不是发送报警, 1-发送报警), 
+		    "driverId": xxx},
+		"status": (0-不是发送状态, 1-发送状态),
+		"statusdetail": {},
+		"warning": (0-不是发送报警, 1-发送报警),
 		"warningdetail": {}
 	   }
 -return: {"status":(0-发送失败, 1-发送成功)}
@@ -320,12 +320,12 @@
 		    "unitId": xxx,
 		    "name": xxx}
 		  }
-		  
+
 
 注册部门
 -url: /registerdepartment
 -way: post
--data: {"unitId": xxx, 
+-data: {"unitId": xxx,
 		"name": xxx}
 -return: {"status": (0-注册失败, 1-注册成功)
 		  "department": {
@@ -358,30 +358,30 @@
 		    "name": xxx,
 		    "detail": xxx}
 		  }
-		  
+
 
 
 获取个人相关的全部消息
 -url: /getmessage
 -way: get
 -data:
--return: {"status": (0-获取失败, 1-获取成功), 
+-return: {"status": (0-获取失败, 1-获取成功),
 		  "infos": [
-		  	{"type": (0-广播，1-其他), 
+		  	{"type": (0-广播，1-其他),
 		  	 "sender": {
-		  	 	"id": xxx, 
+		  	 	"id": xxx,
 		  	 	"username": xxx,
-	         	"authority":(0-普通用户，1-司机，2-管理员， 3-超级管理员), 
-	         	"sex": (0-女， 1-男), 
-	         	"driverType": xxx， 
+	         	"authority":(0-普通用户，1-司机，2-管理员， 3-超级管理员),
+	         	"sex": (0-女， 1-男),
+	         	"driverType": xxx，
 	         	"identify": xxx,
 	         	"phone": xxx,
 	         	"photoURL": xxx,
 	         	"address": xxx,
 	         	"companyID": xxx,
 	         	"appartmentID": xxx,
-	         	"jobNo": xxx}, 
-		  	 "title": xxx, 
+	         	"jobNo": xxx},
+		  	 "title": xxx,
 		  	 "content": xxx}, {}.......]
 		 }
 
@@ -389,9 +389,9 @@
 发送消息
 -url: /sendmessage
 -way: post
--data: {"type": (0-广播，1-其他), 
+-data: {"type": (0-广播，1-其他),
 		"title": xxx,
-	    "content": xxx, 
+	    "content": xxx,
 	    "receiverid": xxx}
 -return: {"status":(0-发送失败，1-发送成功)}
 
@@ -400,7 +400,7 @@
 -url: /getorders?carid=xxx&driverid=xxx&keyword=xxx
 -way: get
 -data:
--return: {"status": (0-获取失败, 1-获取成功), 
+-return: {"status": (0-获取失败, 1-获取成功),
 		  "orderdetails": [
 	      	{order: {"id": xxx,
 	      			 "carID": xxx
@@ -434,7 +434,7 @@
 		    		 "latitude": xxx,
 		    		 "driverId": xxx,
 		    		 "photoURL": xxx},
-		    		{}, ......]}, 
+		    		{}, ......]},
 		    {}, ......]
 		 }
 
@@ -443,8 +443,8 @@
 -url: /getorder?id=xxx
 -way: get
 -data:
--return: {"status": (0-获取失败, 1-获取成功), 
-		  "order": 
+-return: {"status": (0-获取失败, 1-获取成功),
+		  "order":
 		  	{"id": xxx,
 	      	 "carID": xxx
 	      	 "driverId": xxx
@@ -465,7 +465,7 @@
 	      	 "addresseePhone": xxx
 	      	 "addresseeAddress": xxx
 	      	 "sealExpect": xxx
-	      	 "sealCurrent": xxx}, 
+	      	 "sealCurrent": xxx},
 		  "route": [
 		  	{"id": xxx,
 		  	 "carID": xxx,
@@ -477,7 +477,7 @@
 		     "latitude": xxx,
 		     "driverId": xxx,
 		     "photoURL": xxx},
-		    {}, ......], 
+		    {}, ......],
 		  "carstatus": [
 		    {"id": xxx,
 		     "carID": xxx,
@@ -493,7 +493,7 @@
 		     "alertID": xxx,
 		     "photoURL": xxx,
 		     "waybillID": xxx},
-		     {}, ......], 
+		     {}, ......],
 		  "warning": [
 		  	{"id": xxx,
 		  	 "startID": xxx,
@@ -532,20 +532,20 @@
 
 
 删除运单
--url: /removeorder?id=xxx
--way: get
--data:
+-url: /removeorder
+-way: post
+-data: {"id": xxx}
 -return: {"status": (0-删除失败, 1-删除成功)}
 
 
 修改运单
 -url: /modifyorder
 -way: post
--data: {"id": xxx, 
-		"xxx": xxx, 
+-data: {"id": xxx,
+		"xxx": xxx,
 		......}
--return: {"status": (0-修改失败, 1-修改成功), 
-          "order": 
+-return: {"status": (0-修改失败, 1-修改成功),
+          "order":
 		  	{"id": xxx,
 	      	 "carID": xxx
 	      	 "driverId": xxx
@@ -567,17 +567,3 @@
 	      	 "addresseeAddress": xxx
 	      	 "sealExpect": xxx
 	      	 "sealCurrent": xxx}}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
