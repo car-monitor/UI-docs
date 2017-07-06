@@ -88,7 +88,7 @@
 
 
 获取单个用户
--url: /getuser?id=xxx
+-url: /getuser/xxx （xxx为用户id）
 -way: get
 -data:
 -return: {"status": (0-获取失败, 1-获取成功),
@@ -184,7 +184,7 @@
 
 
 获取单个车辆
--url: /getcar?id=xxx
+-url: /getcar/xxx (xxx为车辆id)
 -way: get
 -data:
 -return: {"status": (0-获取失败, 1-获取成功),
@@ -276,7 +276,7 @@
 
 
 获取单个单位
--url: /getunit?id=xxx
+-url: /getunit/xxx （xxx为单位id）
 -way: get
 -data:
 -return: {"status": (0-获取失败, 1-获取成功)
@@ -311,7 +311,7 @@
 
 
 获取单个部门
--url: /getdepartment?id=xxx
+-url: /getdepartment/xxx （xxx为部门id）
 -way: get
 -data:
 -return: {"status": (0-获取失败, 1-获取成功)
@@ -349,7 +349,7 @@
 
 
 获取单个报警字典
--url: /getwarning?id=xxx
+-url: /getwarning/xxx （xxx为报警字典id）
 -way: get
 -data:
 -return: {"status": (0-获取失败, 1-获取成功)
@@ -440,7 +440,7 @@
 
 
 获取单个运单
--url: /getorder?id=xxx
+-url: /getorder/xxx （xxx为单个运单id）
 -way: get
 -data:
 -return: {"status": (0-获取失败, 1-获取成功),
